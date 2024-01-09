@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cluster-apps-base-secrets
+  namespace: flux-system
+spec:
+  path: kubernetes/apps/default/base/secrets
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  wait: true
+  interval: 15m
+  retryInterval: 1m
+  timeout: 20m
