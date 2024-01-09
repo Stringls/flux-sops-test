@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   # Pre Flux kustomizations
   - namespace.yaml
+  - secrets/gitlab.sops.yaml
   # Flux kustomizations
-  - base/ks.yaml
