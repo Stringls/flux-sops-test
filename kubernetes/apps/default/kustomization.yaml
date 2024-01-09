@@ -4,5 +4,5 @@ resources:
   # Pre Flux kustomizations
   - namespace.yaml
   - main.yaml
-  - secrets/gitlab.sops.yaml
+  # - secrets/gitlab.sops.yaml
   # Flux kustomizations
