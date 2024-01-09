@@ -47,7 +47,7 @@ sops -i -d secret.yaml
 
 ```shell
 # Gitlab
-export GITLAB_TOKEN=glpat-XYZ
+export GITLAB_TOKEN=glpat-oYyzJsbKDtZ_sAX73AxT
 flux bootstrap gitlab \
     --deploy-token-auth \
     --owner=masterbpro \
