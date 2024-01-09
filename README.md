@@ -44,14 +44,30 @@ sops -i -d secret.yaml
 ---
 
 ### Installation
+
 ```shell
-flux bootstrap github
-    --token-auth
-    --owner=masterbpro
-    --repository=iac
-    --branch=main
-    --path=./kubernetes/flux
-    --components-extra=image-reflector-controller,image-automation-controller
-    --version=latest
+# Gitlab
+export GITLAB_TOKEN=glpat-XYZ
+flux bootstrap gitlab \
+    --deploy-token-auth \
+    --owner=masterbpro \
+    --repository=iac \
+    --branch=main \
+    --path=./kubernetes/flux \
+    --components-extra=image-reflector-controller,image-automation-controller \
+    --version=latest \
+    --personal
+```
+
+```shell
+# Github
+flux bootstrap github \
+    --token-auth \
+    --owner=masterbpro \
+    --repository=iac \
+    --branch=main \
+    --path=./kubernetes/flux \
+    --components-extra=image-reflector-controller,image-automation-controller \
+    --version=latest \
     --personal
 ```
